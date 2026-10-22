@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,23 +14,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{--noir:#000;--charbon:#0d0c0a;--or:#d4af37;--or-clair:#f1d98a;--texte:#ece6d6;--gris:#a8a193;--ligne:rgba(212,175,55,.3)}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{background:var(--noir);color:var(--texte);font:300 1.05rem/1.7 Jost,system-ui,sans-serif}
 h1,h2,h3,.logo{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600}
-a{color:var(--or-clair)}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--or);outline-offset:3px}
-.skip{position:absolute;left:-999px}
-.skip:focus{left:8px;top:8px;background:var(--or);color:#000;padding:8px;z-index:99}
+a{color:var(--or-clair)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--or);color:#000;padding:8px;z-index:99}
 h1,h2{background:linear-gradient(100deg,#9c7a1c,#f1d98a 45%,#b8932b 70%,#f1d98a);-webkit-background-clip:text;background-clip:text;color:transparent}
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--ligne)}
 .logo{font-size:1.5rem;letter-spacing:.12em;text-decoration:none;color:var(--or)}
-nav a{color:var(--texte);text-decoration:none;margin-left:1.6rem;font-size:.95rem}
-nav a:hover{color:var(--or)}
-.burger{display:none;background:none;border:0;padding:10px;cursor:pointer}
-.burger span{display:block;width:26px;height:2px;background:var(--or);margin:6px 0}
+nav a{color:var(--texte);text-decoration:none;margin-left:1.6rem;font-size:.95rem}nav a:hover{color:var(--or)}
+.burger{display:none;background:none;border:0;padding:10px;cursor:pointer}.burger span{display:block;width:26px;height:2px;background:var(--or);margin:6px 0}
 .hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;padding:0 5vw 9vh;overflow:hidden}
-.hero-img{position:absolute;inset:0;background:url(images/joyz-fit-hero.jpg) center/cover,radial-gradient(ellipse at 70% 30%,#2a2210 0,#000 65%)}
+.hero-img{position:absolute;inset:0;background:url(../images/joyz-fit-hero.jpg) center/cover,radial-gradient(ellipse at 70% 30%,#2a2210 0,#000 65%)}
 .hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,#000 5%,transparent 70%)}
 .hero-txt{position:relative;max-width:720px;animation:entree 1.4s ease both}
 h1{font-size:clamp(3.6rem,15vw,9rem);line-height:.95;letter-spacing:.04em}
@@ -39,78 +33,50 @@ h1{font-size:clamp(3.6rem,15vw,9rem);line-height:.95;letter-spacing:.04em}
 .intro{color:var(--gris);max-width:52ch;margin-bottom:1.8rem}
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.5rem}
 .btn{display:inline-block;padding:.85rem 1.6rem;border:1px solid var(--or);color:var(--or);text-decoration:none;background:none;font:500 1rem Jost,sans-serif;cursor:pointer;transition:.25s}
-.btn:hover{background:rgba(212,175,55,.12)}
-.btn.gold{background:var(--or);color:#000}
-.btn.gold:hover{background:var(--or-clair)}
-.sec{padding:clamp(4rem,10vw,7rem) 5vw}
-.sec.alt{background:var(--charbon);border-block:1px solid var(--ligne)}
+.btn:hover{background:rgba(212,175,55,.12)}.btn.gold{background:var(--or);color:#000}.btn.gold:hover{background:var(--or-clair)}
+.sec{padding:clamp(4rem,10vw,7rem) 5vw}.sec.alt{background:var(--charbon);border-block:1px solid var(--ligne)}
 .sec>*{max-width:1100px;margin-inline:auto}
 h2{font-size:clamp(2.2rem,6vw,3.5rem);margin-bottom:2rem;display:block;width:fit-content}
 .lead{color:var(--gris);margin-bottom:1.5rem}
-.bio{display:grid;gap:2rem;grid-template-columns:1fr}
-.bio p{margin-bottom:1rem;max-width:62ch}
+.bio{display:grid;gap:2rem;grid-template-columns:1fr}.bio p{margin-bottom:1rem;max-width:62ch}
 .photo img,.ph{width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--ligne)}
 .ph{display:grid;place-items:center;text-align:center;color:var(--gris);padding:1rem;border-style:dashed}
 .grid{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{border:1px solid var(--ligne);padding:1.2rem;background:#050504}
-.card h3{font-size:1.4rem;color:var(--or-clair);margin-bottom:.4rem}
-.card p{color:var(--gris);font-size:.95rem;margin-bottom:.8rem}
-.card .ph{aspect-ratio:1;margin-bottom:1rem}
-.card img{width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:1rem}
+.card{border:1px solid var(--ligne);padding:1.2rem;background:#050504}.card h3{font-size:1.4rem;color:var(--or-clair);margin-bottom:.4rem}
+.card p{color:var(--gris);font-size:.95rem;margin-bottom:.8rem}.card .ph{aspect-ratio:1;margin-bottom:1rem}.card img{width:100%;aspect-ratio:1;object-fit:cover;margin-bottom:1rem}
 .video{aspect-ratio:16/9;width:100%;border:0;margin-bottom:.8rem;background:#050504}
-.concerts{list-style:none;padding:0}
-.concerts li{display:grid;gap:.3rem 1.5rem;grid-template-columns:auto 1fr auto;align-items:center;padding:1.1rem 0;border-bottom:1px solid var(--ligne)}
-.concerts time{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--or)}
-.concerts .vide{color:var(--gris);display:block}
+.concerts{list-style:none;padding:0}.concerts li{display:grid;gap:.3rem 1.5rem;grid-template-columns:auto 1fr auto;align-items:center;padding:1.1rem 0;border-bottom:1px solid var(--ligne)}
+.concerts time{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--or)}.concerts .vide{color:var(--gris);display:block}
 .contact{display:grid;gap:3rem;grid-template-columns:1fr}
-form{display:grid;gap:1rem}
-label{display:grid;gap:.35rem;font-size:.95rem;color:var(--gris)}
+form{display:grid;gap:1rem}label{display:grid;gap:.35rem;font-size:.95rem;color:var(--gris)}
 input,select,textarea{width:100%;background:#000;color:var(--texte);border:1px solid var(--ligne);padding:.8rem;font:inherit}
-.hp{position:absolute;left:-999px}
-#statut{min-height:1.5em;color:var(--or-clair)}
-.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.5rem}
-.socials a{border:1px solid var(--ligne);padding:.5rem 1rem;text-decoration:none}
-.socials a:hover{border-color:var(--or)}
+.hp{position:absolute;left:-999px}#statut{min-height:1.5em;color:var(--or-clair)}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.5rem}.socials a{border:1px solid var(--ligne);padding:.5rem 1rem;text-decoration:none}.socials a:hover{border-color:var(--or)}
 footer{text-align:center;padding:2.5rem 5vw;color:var(--gris);border-top:1px solid var(--ligne);font-size:.9rem}
 @keyframes entree{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @media(min-width:800px){.bio{grid-template-columns:5fr 7fr;align-items:start}.contact{grid-template-columns:5fr 6fr}}
-@media(max-width:799px){
-.burger{display:block}
-nav{position:absolute;top:100%;left:0;right:0;background:#000;display:none;flex-direction:column;padding:1rem 5vw;border-bottom:1px solid var(--ligne)}
-nav.open{display:flex}
-nav a{margin:0;padding:.8rem 0}
-.concerts li{grid-template-columns:1fr}
-}
+@media(max-width:799px){.burger{display:block}nav{position:absolute;top:100%;left:0;right:0;background:#000;display:none;flex-direction:column;padding:1rem 5vw;border-bottom:1px solid var(--ligne)}nav.open{display:flex}nav a{margin:0;padding:.8rem 0}.concerts li{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-
 <header class="nav">
   <a class="logo" href="#accueil" aria-label="JOYZ FIT, accueil">JOYZ FIT</a>
   <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   <nav id="menu" aria-label="Navigation principale">
-    <a href="#biographie">Biographie</a>
-    <a href="#musique">Musique</a>
-    <a href="#videos">Vidéos</a>
-    <a href="#concerts">Concerts</a>
-    <a href="#presse">Presse</a>
-    <a href="#booking">Booking</a>
+    <a href="#biographie">Biographie</a><a href="#musique">Musique</a><a href="#videos">Vidéos</a>
+    <a href="#concerts">Concerts</a><a href="#presse">Presse</a><a href="#booking">Booking</a>
   </nav>
 </header>
-
 <main id="contenu">
 <section id="accueil" class="hero">
-  <div class="hero-img" role="img" aria-label="Photo officielle de JOYZ FIT"></div>
+  <div class="hero-img" role="img" aria-label="Emplacement de la photo officielle de JOYZ FIT"></div>
   <div class="hero-txt">
     <h1>JOYZ FIT</h1>
     <p class="slogan">La musique au-delà des frontières</p>
-    <p class="intro" data-conf="intro">Découvrez JOYZ FIT, créateur du SPIRO JAZZ’IK et inventeur du BILADI — MITAR.</p>
-    <div class="btns">
-      <a class="btn gold" href="#musique">Écouter la musique</a>
-      <a class="btn" href="#booking">Booking professionnel</a>
-    </div>
+    <p class="intro" data-conf="intro">Artiste international. Découvrez la musique, les clips et les prochaines dates de JOYZ FIT.</p>
+    <div class="btns"><a class="btn gold" href="#musique">Écouter la musique</a><a class="btn" href="#booking">Booking professionnel</a></div>
   </div>
 </section>
 
@@ -158,10 +124,7 @@ nav a{margin:0;padding:.8rem 0}
       <label>Adresse e-mail<input name="email" type="email" required autocomplete="email"></label>
       <label>Organisation<input name="organisation" autocomplete="organization"></label>
       <label>Type d'événement
-        <select name="type">
-          <option>Concert</option><option>Festival</option><option>Événement privé</option>
-          <option>Collaboration</option><option>Partenariat</option><option>Presse</option><option>Autre</option>
-        </select>
+        <select name="type"><option>Concert</option><option>Festival</option><option>Événement privé</option><option>Collaboration</option><option>Partenariat</option><option>Presse</option><option>Autre</option></select>
       </label>
       <label>Date souhaitée<input name="date" type="date"></label>
       <label>Message<textarea name="message" rows="5" required></textarea></label>
@@ -172,38 +135,50 @@ nav a{margin:0;padding:.8rem 0}
   </div>
 </section>
 </main>
-
 <footer><p>© <span id="an"></span> JOYZ FIT. Tous droits réservés.</p></footer>
-
 <script>
-/* ===== CONFIGURATION DU SITE ===== */
+/* ===== FICHIER À MODIFIER : tout le contenu du site est ici ===== */
 const CONFIG = {
-  intro: `Imaginez la rencontre entre les vibrations de l’Afrique, la liberté du jazz, les résonances du monde arabe et le souffle de la spiritualité. Un artiste qui transforme la voix en vibration, le rythme en respiration et un instrument à cinq cordes en langage universel. Mesdames et Messieurs, découvrez JOYZ FIT, créateur du SPIRO JAZZ’IK et inventeur du BILADI — MITAR.
-
-Entre héritage africain et horizons émiratis, JOYZ FIT façonne une signature sonore singulière, où l’improvisation devient un dialogue entre les cultures et la musique une expérience de l’âme.
-
-Du Cameroun aux Émirats arabes unis, son parcours témoigne d’une résilience profonde et d’une ambition sans frontières : faire du SPIRO JAZZ’IK un pont musical entre les peuples, les traditions et les générations.`,
+  intro: "Créateur du SPIRO JAZZ’IK et inventeur du BILADI — MITAR, JOYZ FIT fait dialoguer les vibrations de l’Afrique, la liberté du jazz, les résonances du monde arabe et le souffle de la spiritualité. Du Cameroun aux Émirats arabes unis, il développe une signature sonore singulière, où la musique devient un pont entre les cultures et les générations.",
   biographie: [
-    "À COMPLÉTER : votre biographie définitive (parcours, univers musical, ambitions).",
-    "À COMPLÉTER : deuxième paragraphe (facultatif)."
+    "JOYZ FIT est un artiste musicien camerounais établi aux Émirats arabes unis, créateur du SPIRO JAZZ’IK et inventeur du BILADI — MITAR. Son univers artistique se distingue par une rencontre entre les vibrations de l’Afrique, la liberté du jazz, les résonances du monde arabe et le souffle de la spiritualité. À travers cette identité musicale singulière, il explore les liens entre les cultures, les traditions et les expressions contemporaines, avec la volonté de faire de la musique un langage universel. Son approche repose sur l’émotion, l’improvisation et la richesse des héritages culturels, qu’il transforme en une expérience sonore ouverte sur le monde.",
+    "À travers ses créations et ses performances, JOYZ FIT développe une signature musicale personnelle dans laquelle les rythmes africains dialoguent avec les couleurs du jazz et les influences du monde arabe. Le SPIRO JAZZ’IK représente le cœur de sa démarche artistique : un espace de liberté, de rencontre et d’expérimentation où les sonorités se croisent et se réinventent. Avec le BILADI — MITAR, instrument à cinq cordes associé à son identité artistique, il souhaite proposer une nouvelle manière de faire dialoguer les traditions et les sensibilités musicales. Sa démarche célèbre la diversité, la créativité et la capacité de la musique à rapprocher les peuples au-delà des frontières.",
+    "L’année 2026 marque une étape importante dans son parcours discographique avec la sortie de ses deux albums, DOUMA et ABOVE, produits par son propre label, BOBO LIVE RECORDS. Ces deux projets s’inscrivent dans le développement de son identité musicale et de sa vision artistique, en mettant en avant son ambition de faire dialoguer les cultures et d’explorer de nouveaux horizons sonores. À travers ces productions, JOYZ FIT affirme également son engagement dans le développement indépendant de sa musique et dans la construction d’un catalogue artistique qui lui ressemble.",
+    "Installé aux Émirats arabes unis, JOYZ FIT poursuit le développement de son projet artistique dans un environnement marqué par la rencontre des cultures et des influences internationales. Sa participation à la deuxième édition d’Al Qattara Melodies constitue une étape importante de son parcours. À cette occasion, il a reçu un certificat de participation délivré par le Département de la Culture et du Tourisme des Émirats arabes unis. Cette expérience témoigne de son engagement dans la vie culturelle et musicale des Émirats et de sa volonté de partager son univers artistique avec des publics issus d’horizons différents.",
+    "JOYZ FIT est également membre de l’association Musicians Association UAE, une appartenance qui s’inscrit dans son engagement envers la communauté musicale émiratie. À travers son parcours entre le Cameroun et les Émirats arabes unis, il poursuit une ambition artistique tournée vers l’échange, la transmission et le développement de nouvelles possibilités musicales. Son travail s’inscrit dans une vision où l’identité africaine demeure une source d’inspiration essentielle, tout en s’enrichissant des rencontres et des influences du monde.",
+    "En développant le SPIRO JAZZ’IK, le BILADI — MITAR et ses productions au sein de BOBO LIVE RECORDS, JOYZ FIT affirme sa volonté de construire un univers musical reconnaissable et ouvert à la scène internationale. Son ambition est de faire de ses créations un pont entre les peuples, les traditions et les générations, en proposant une expérience artistique qui associe héritage, innovation et spiritualité. À travers la musique, il souhaite transmettre un message de dialogue, d’unité et d’ouverture, tout en poursuivant l’évolution de sa signature sonore."
   ],
-  email: "",
-  telephone: "",
-  formulaire: "",
-  plateformes: [],
-  musique: [],
-  videos: [],
-  concerts: [],
-  presse: [
+  email: "",            // ex. "booking@votredomaine.com"
+  telephone: "",        // ex. "+971 50 000 0000"
+  formulaire: "",       // lien Formspree (voir README). Vide = ouvre le logiciel e-mail
+  plateformes: [        // liens de streaming
+    // { nom: "YouTube", url: "https://youtube.com/..." },
+    // { nom: "Spotify", url: "https://open.spotify.com/..." }
+  ],
+  musique: [            // singles / albums
+    // { titre: "Titre", type: "Single", annee: "2026", image: "images/cover1.jpg", url: "https://..." }
+  ],
+  videos: [             // youtubeId = la fin du lien après v=
+    // { titre: "Titre du clip", youtubeId: "XXXXXXXXXXX" }
+  ],
+  concerts: [           // aucune date inventée
+    // { date: "2026-12-31", lieu: "Salle", ville: "Ville, Pays", billets: "https://..." }
+  ],
+  presse: [             // mettez vos fichiers dans le dossier presse/
     { nom: "Biographie (PDF)", fichier: "presse/biographie.pdf" },
     { nom: "Photos promotionnelles", fichier: "presse/photos.zip" },
     { nom: "Logo", fichier: "presse/logo.zip" },
     { nom: "Dossier de presse", fichier: "presse/dossier-presse.pdf" }
   ],
-  reseaux: []
+  reseaux: [            // liens officiels
+    // { nom: "Instagram", url: "https://instagram.com/..." },
+    // { nom: "YouTube", url: "https://youtube.com/..." },
+    // { nom: "TikTok", url: "https://tiktok.com/@..." },
+    // { nom: "Facebook", url: "https://facebook.com/..." }
+  ]
 };
-</script>
 
+</script>
 <script>
 (function(){
 const C=CONFIG,$=s=>document.querySelector(s);
@@ -220,33 +195,32 @@ m.onclick=e=>{if(e.target.tagName==="A"){m.classList.remove("open");b.setAttribu
 const mu=$("#liste-musique");
 if(!C.musique.length)vide(mu,"Les sorties seront bientôt disponibles.");
 C.musique.forEach(s=>{const c=el("article",{className:"card"});
-c.innerHTML=(s.image?`<img src="${esc(s.image)}" alt="Pochette de ${esc(s.titre)}" loading="lazy">`:'<div class="ph">Pochette</div>')+`<h3>${esc(s.titre)}</h3><p>${esc(s.type||"")} ${esc(s.annee||"")}</p>`+(s.url?`<a class="btn" href="${safe(s.url)}" target="_blank" rel="noopener">Écouter</a>`:"");
-mu.append(c)});
+ c.innerHTML=(s.image?`<img src="${esc(s.image)}" alt="Pochette de ${esc(s.titre)}" loading="lazy">`:'<div class="ph">Pochette</div>')+`<h3>${esc(s.titre)}</h3><p>${esc(s.type||"")} ${esc(s.annee||"")}</p>`+(s.url?`<a class="btn" href="${safe(s.url)}" target="_blank" rel="noopener">Écouter</a>`:"");
+ mu.append(c)});
 C.plateformes.forEach(p=>$("#plateformes").append(el("a",{className:"btn",href:safe(p.url),target:"_blank",rel:"noopener"},esc(p.nom))));
 const vi=$("#liste-videos");
 if(!C.videos.length)vide(vi,"Les clips seront bientôt disponibles.");
 C.videos.forEach(v=>{const c=el("article",{className:"card"});
-c.innerHTML=`<iframe class="video" loading="lazy" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.youtubeId)}" title="${esc(v.titre)}" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe><h3>${esc(v.titre)}</h3>`;
-vi.append(c)});
+ c.innerHTML=`<iframe class="video" loading="lazy" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.youtubeId)}" title="${esc(v.titre)}" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe><h3>${esc(v.titre)}</h3>`;vi.append(c)});
 const co=$("#liste-concerts"),auj=new Date().toISOString().slice(0,10);
 const pr=C.concerts.filter(c=>c.date>=auj).sort((a,b)=>a.date.localeCompare(b.date));
 if(!pr.length)co.append(el("li",{className:"vide"},"Aucune date annoncée pour le moment. Pour une demande de booking, utilisez le formulaire ci-dessous."));
 pr.forEach(c=>{const d=new Date(c.date+"T12:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"});
-co.append(el("li",{},`<time datetime="${esc(c.date)}">${d}</time><span>${esc(c.lieu)}, ${esc(c.ville)}</span>`+(c.billets?`<a class="btn" href="${safe(c.billets)}" target="_blank" rel="noopener">Billets</a>`:"")))});
+ co.append(el("li",{},`<time datetime="${esc(c.date)}">${d}</time><span>${esc(c.lieu)}, ${esc(c.ville)}</span>`+(c.billets?`<a class="btn" href="${safe(c.billets)}" target="_blank" rel="noopener">Billets</a>`:"")))});
 C.presse.forEach(p=>$("#liste-presse").append(el("article",{className:"card"},`<h3>${esc(p.nom)}</h3><a class="btn" href="${esc(p.fichier)}" download>Télécharger</a>`)));
 if(C.email){const a=$("#mail");a.href="mailto:"+C.email;a.textContent=C.email}else $("#mail").replaceWith("E-mail professionnel : à compléter");
 if(C.telephone){const a=$("#tel");a.href="tel:"+C.telephone.replace(/\s/g,"");a.textContent="Booking : "+C.telephone}else $("#tel").replaceWith("Numéro de booking : à compléter");
 C.reseaux.forEach(r=>$("#reseaux").append(el("a",{href:safe(r.url),target:"_blank",rel:"noopener"},esc(r.nom))));
 const f=$("#form"),st=$("#statut");
 f.addEventListener("submit",async e=>{e.preventDefault();
-if(!f.checkValidity()){st.textContent="Merci de remplir le nom, un e-mail valide et le message.";f.reportValidity();return}
-const d=Object.fromEntries(new FormData(f));if(d._gotcha)return;
-if(C.formulaire){try{const r=await fetch(C.formulaire,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(d)});
-if(r.ok){f.reset();st.textContent="Merci, votre demande a bien été envoyée."}else throw 0}catch{st.textContent="Envoi impossible. Réessayez ou écrivez directement par e-mail."}return}
-if(!C.email){st.textContent="Le formulaire n'est pas encore configuré (voir README).";return}
-const corps=`Nom : ${d.nom}\nE-mail : ${d.email}\nOrganisation : ${d.organisation}\nÉvénement : ${d.type}\nDate : ${d.date}\n\n${d.message}`;
-location.href=`mailto:${C.email}?subject=${encodeURIComponent("Demande de booking JOYZ FIT")}&body=${encodeURIComponent(corps)}`;
-st.textContent="Votre logiciel e-mail s'ouvre pour finaliser l'envoi."});
+ if(!f.checkValidity()){st.textContent="Merci de remplir le nom, un e-mail valide et le message.";f.reportValidity();return}
+ const d=Object.fromEntries(new FormData(f));if(d._gotcha)return;
+ if(C.formulaire){try{const r=await fetch(C.formulaire,{method:"POST",headers:{Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(d)});
+  if(r.ok){f.reset();st.textContent="Merci, votre demande a bien été envoyée."}else throw 0}catch{st.textContent="Envoi impossible. Réessayez ou écrivez directement par e-mail."}return}
+ if(!C.email){st.textContent="Le formulaire n'est pas encore configuré (voir README).";return}
+ const corps=`Nom : ${d.nom}\nE-mail : ${d.email}\nOrganisation : ${d.organisation}\nÉvénement : ${d.type}\nDate : ${d.date}\n\n${d.message}`;
+ location.href=`mailto:${C.email}?subject=${encodeURIComponent("Demande de booking JOYZ FIT")}&body=${encodeURIComponent(corps)}`;
+ st.textContent="Votre logiciel e-mail s'ouvre pour finaliser l'envoi."});
 })();
 </script>
 </body>
